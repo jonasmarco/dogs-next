@@ -1,0 +1,47 @@
+.modal {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  padding: 2rem 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.modal .photo {
+  background-color: #fff;
+  border-radius: .2rem;
+  max-width: 896px;
+  width: 100%;
+}
+
+.modal .photo img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 64rem) {
+  .modal .photo {
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+  }
+
+  .modal .photo>div {
+    grid-template-columns: 1fr;
+  }
+
+  .modal .photo>div>div:first-of-type {
+    width: 100%;
+  }
+}
+
+@media (max-width: 40rem) {
+  .modal {
+    padding: 2rem;
+  }
+}
